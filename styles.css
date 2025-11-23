@@ -127,6 +127,7 @@ body {
     justify-content: center;
     background: var(--background);
     box-shadow: 0 10px 40px var(--shadow);
+    z-index: 1;
 }
 
 .avatar-image {
