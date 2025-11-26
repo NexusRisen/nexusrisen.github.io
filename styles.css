@@ -160,6 +160,15 @@ body {
     margin-bottom: 2rem;
 }
 
+.section-title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--text-secondary);
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
 .link-card {
     background: var(--surface);
     border: 1px solid rgba(99, 102, 241, 0.2);
