@@ -148,24 +148,65 @@ body {
 }
 
 .profile-bio {
-    font-size: 1rem;
-    color: var(--text-secondary);
-    font-weight: 400;
+    font-size: 1.1rem;
+    color: var(--text);
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    margin-top: 0.25rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+
+.profile-bio::before,
+.profile-bio::after {
+    content: '';
+    width: 30px;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, var(--primary), transparent);
+    border-radius: 2px;
 }
 
 .profile-about {
     font-size: 0.95rem;
-    color: var(--text-secondary);
+    color: rgba(255, 255, 255, 0.85);
     font-weight: 400;
-    line-height: 1.6;
-    margin-top: 1.25rem;
-    padding: 1rem 1.5rem;
-    background: var(--surface);
-    border-radius: 12px;
-    border: 1px solid rgba(99, 102, 241, 0.15);
+    line-height: 1.7;
+    margin-top: 1.5rem;
+    padding: 1.25rem 1.75rem;
+    background: linear-gradient(135deg, rgba(99, 102, 241, 0.08), rgba(236, 72, 153, 0.05));
+    border-radius: 16px;
+    border: 1px solid rgba(99, 102, 241, 0.25);
     max-width: 520px;
     margin-left: auto;
     margin-right: auto;
+    position: relative;
+    box-shadow: 0 4px 24px rgba(99, 102, 241, 0.15);
+    backdrop-filter: blur(10px);
+    transition: all 0.3s ease;
+}
+
+.profile-about:hover {
+    border-color: rgba(99, 102, 241, 0.4);
+    box-shadow: 0 8px 32px rgba(99, 102, 241, 0.25);
+    transform: translateY(-2px);
+}
+
+.profile-about::before {
+    content: '"';
+    position: absolute;
+    top: -10px;
+    left: 20px;
+    font-size: 3rem;
+    font-family: Georgia, serif;
+    background: linear-gradient(135deg, var(--primary), var(--secondary));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    opacity: 0.6;
+    line-height: 1;
 }
 
 .links-section {
@@ -311,6 +352,28 @@ body {
 
     .avatar-inner {
         font-size: 2rem;
+    }
+
+    .profile-bio {
+        font-size: 0.95rem;
+        letter-spacing: 0.02em;
+    }
+
+    .profile-bio::before,
+    .profile-bio::after {
+        width: 20px;
+    }
+
+    .profile-about {
+        font-size: 0.9rem;
+        padding: 1rem 1.25rem;
+        margin-top: 1.25rem;
+    }
+
+    .profile-about::before {
+        font-size: 2.5rem;
+        top: -8px;
+        left: 15px;
     }
 
     .link-card {
